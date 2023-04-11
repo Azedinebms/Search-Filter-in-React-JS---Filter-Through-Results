@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'
 
-function App() {
+const App = () => {
+
+  const [fruits_list, setFruits] = useState(["Apple", "Orange", "Banana"])
+
+  const fruit = fruits_list.map((fruit, index) => (
+    <p ket={index}><b>{fruit}</b></p>
+  )
+  )
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Array with React Js</h1>
+      {fruit}
     </div>
   );
 }
